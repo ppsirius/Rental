@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>BRAND</th>
+        <th>AVAILABILITY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.brand.model %></td>
+        <td><%= car.state %>
+            <%= if car.state == rented %>
+              RENTED
+            <% elsif car.state == serviced %>
+              IN MAINTENANCE
+            <% else %>
+              AVAILABLE
+              <% end %>
+        </td>
+        <% end %>
+      </tr>
+    </tbody>
+</body>
+</html>

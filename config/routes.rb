@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   
   devise_for :users
-  root to: 'rents#index'
+  root to: 'cars#index'
 
   get 'rents/index'
 
