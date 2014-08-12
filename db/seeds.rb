@@ -28,7 +28,9 @@ client_3 = Client.create(name: 'Ben', surname: 'Man', age: 34, document_no: 'ZZZ
 
 car_1 = Car.create(model_id: audi.id, mileage: 2000, registration_no: "KR1234", year_of_manufacture: 2000)
 car_2 = Car.create(model_id: bmw.id, mileage: 23000, registration_no: "WW1234", year_of_manufacture: 2012)
-car_3 = Car.create(model_id: mercedes.id, mileage: 23000, registration_no: "WW1234", year_of_manufacture: 2012)
+car_3 = Car.create(model_id: mercedes.id, mileage: 23000, registration_no: "WW1234", year_of_manufacture: 2012, state: 'rented')
+car_4 = Car.create(model_id: audi.id, mileage: 12000, registration_no: "SJ1234", year_of_manufacture: 2010, state: 'serviced')
+
 
 Rent.create(client_id: client_1.id, car_id: car_2.id)
 Rent.create(client_id: client_2.id, car_id: car_1.id)

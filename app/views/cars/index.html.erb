@@ -3,21 +3,23 @@
 <head>
 </head>
 <body>
-  <table>
+  <table class="table table table-striped">
     <thead>
       <tr>
         <th>BRAND</th>
+        <th>MODEL</th>
         <th>AVAILABILITY</th>
       </tr>
     </thead>
     <tbody>
       <% @cars.each do |car| %>
       <tr>
-        <td><%= car.methods %></td>
+        <td><%= car.model.brand.brand_name %></td>
+        <td><%= car.model.model_name %></td>
         <td><%= car.state %>
-            <% if (car.state == :rented) %>
+            <% if (car.state == 'rented') %>
               RENTED
-            <% elsif (car.state == :serviced) %>
+            <% elsif (car.state == 'serviced') %>
               IN MAINTENANCE
             <% else %>
               AVAILABLE
