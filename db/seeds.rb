@@ -6,21 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Brand.delete_all
+Car.delete_all
+Client.delete_all
+Model.delete_all
+Rent.delete_all
 
-Brand.create(brand_name: 'Audi')
-Brand.create(brand_name: 'Bmw')
+audi_car = Brand.create(brand_name: 'Audi')
+bmw_car = Brand.create(brand_name: 'Bmw')
+mercedes_car = Brand.create(brand_name: 'Mercedes')
 
 
-Brand.last.models.create(model_name: 'A4')
-Brand.first.models.create(model_name: 'M3')
+audi = Model.create(model_name: 'Quatrro', brand_id: audi_car.id)
+bmw = Model.create(model_name: 'Fast', brand_id: bmw_car.id)
+mercedes = Model.create(model_name: 'CKlass', brand_id: mercedes_car.id)
 
 
-Client.create(name: 'John', surname: 'Doe', age: 23, document_no: 'AGF1234', document_type: 'ID')
-Client.create(name: 'Tom', surname: 'Flo', age: 44, document_no: 'AGF9999', document_type: 'ID')
-Client.create(name: 'Ben', surname: 'Man', age: 34, document_no: 'ZZZ1234', document_type: 'ID')
+client_1 = Client.create(name: 'John', surname: 'Doe', age: 23, document_no: 'AGF1234', document_type: 'ID')
+client_2 = Client.create(name: 'Tom', surname: 'Flo', age: 44, document_no: 'AGF9999', document_type: 'ID')
+client_3 = Client.create(name: 'Ben', surname: 'Man', age: 34, document_no: 'ZZZ1234', document_type: 'ID')
 
-Car.create(model_id: 2, mileage: 2000, registration_no: "KR1234", year_of_manufacture: 2000)
-Car.create(model_id: 3, mileage: 23000, registration_no: "WW1234", year_of_manufacture: 2012)
+car_1 = Car.create(model_id: audi.id, mileage: 2000, registration_no: "KR1234", year_of_manufacture: 2000)
+car_2 = Car.create(model_id: bmw.id, mileage: 23000, registration_no: "WW1234", year_of_manufacture: 2012)
+car_3 = Car.create(model_id: mercedes.id, mileage: 23000, registration_no: "WW1234", year_of_manufacture: 2012)
 
-Rent.create(client_id: 1, car_id: 2)
-Rent.create(client_id: 2, car_id: 1)
+Rent.create(client_id: client_1.id, car_id: car_2.id)
+Rent.create(client_id: client_2.id, car_id: car_1.id)
