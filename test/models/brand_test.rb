@@ -21,7 +21,11 @@ class BrandTest < ActiveSupport::TestCase
      test1.save
      test2 = Brand.new(:brand_name => "Volvo")
      assert_equal false, test2.save
-     
+   end
+   
+   test "Brand name should have only chars" do
+     test = Brand.new(:brand_name => "999999")
+     assert_equal false, test.save
    end
    
 end
