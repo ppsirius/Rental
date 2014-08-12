@@ -7,13 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Brand.delete_all
-Car.delete_all
-Client.delete_all
-Model.delete_all
-Rent.delete_all
-
-
 Brand.create(brand_name: 'Audi')
 Brand.create(brand_name: 'Bmw')
 
