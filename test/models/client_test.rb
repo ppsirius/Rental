@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ClientTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+   test "Client with empty params" do
+     test = Client.new()
+     assert_equal false, test.save
+   end
 end
