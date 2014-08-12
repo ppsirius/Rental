@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140812103603) do
 
   create_table "brands", force: true do |t|
@@ -22,6 +23,13 @@ ActiveRecord::Schema.define(version: 20140812103603) do
   create_table "models", force: true do |t|
     t.string   "model_name"
     t.integer  "brand_id"
+=======
+ActiveRecord::Schema.define(version: 20140812103356) do
+
+  create_table "rents", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "car_id"
+>>>>>>> 62a9767ebb3ec2cb971cbd69551dc7e2182ce400
     t.datetime "created_at"
     t.datetime "updated_at"
   end
