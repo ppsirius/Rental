@@ -11,6 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140812103356) do
+
+  create_table "rents", force: true do |t|
+    t.integer  "client_id"
+    t.integer  "car_id"
+=======
+>>>>>>> a63ef704efe471d0e7bc6755c60d16c6e5aa96c6
 ActiveRecord::Schema.define(version: 20140812103603) do
 
   create_table "brands", force: true do |t|
@@ -22,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140812103603) do
   create_table "models", force: true do |t|
     t.string   "model_name"
     t.integer  "brand_id"
+<<<<<<< HEAD
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +40,9 @@ ActiveRecord::Schema.define(version: 20140812103603) do
   create_table "rents", force: true do |t|
     t.integer  "client_id"
     t.integer  "car_id"
+=======
+>>>>>>> 5e794668e7eeb45e256898dbcf7e895af68149b0
+>>>>>>> a63ef704efe471d0e7bc6755c60d16c6e5aa96c6
     t.datetime "created_at"
     t.datetime "updated_at"
   end
