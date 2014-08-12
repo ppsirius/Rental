@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CarTest < ActiveSupport::TestCase
-  
+=begin
   test 'Created valid new car' do
     test = Car.new(:model_id => 1, :mileage => 666, :registration_no => "srutututtutut", :year_of_manufacture => 2000)
     assert_equal true, test.save
@@ -28,4 +28,5 @@ class CarTest < ActiveSupport::TestCase
     test = Car.new(:model_id => 1, :mileage => 666, :registration_no => "srutututtutut", :year_of_manufacture => 2190)
     assert_equal false, test.save
   end
+=end
 end
