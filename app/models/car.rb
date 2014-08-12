@@ -5,7 +5,7 @@ class Car < ActiveRecord::Base
 
   validates :model_id, presence: true 
   validates :registration_no, presence: true
-  validates :date_of_manufacture, presence: true, numericality: {
+  validates :year_of_manufacture, presence: true, numericality: {
     greater_than_or_equal_to: 1990, 
     less_than_or_equal_to: Time.now.year.to_i
   }
