@@ -11,6 +11,9 @@ class Car < ActiveRecord::Base
   }
   validates :mileage, presence: true, numericality: {greater_than: 0}
 
+
+protected
+
   state_machine initial: :available do
     state :available
     state :rented
