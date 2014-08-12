@@ -13,15 +13,15 @@
     <tbody>
       <% @cars.each do |car| %>
       <tr>
-        <td><%= car.brand.model %></td>
+        <td><%= car.methods %></td>
         <td><%= car.state %>
-            <%= if car.state == rented %>
+            <% if (car.state == :rented) %>
               RENTED
-            <% elsif car.state == serviced %>
+            <% elsif (car.state == :serviced) %>
               IN MAINTENANCE
             <% else %>
               AVAILABLE
-              <% end %>
+            <% end %>
         </td>
         <% end %>
       </tr>
