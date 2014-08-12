@@ -1,4 +1,8 @@
 class Car < ActiveRecord::Base
+  belongs_to :model
+  has_many :rents
+  has_many :clients, through: :rents
+
   validates :model_id, presence: true 
   validates :registration_no, presence: true
   validates :date_of_manufacture, presence: true, numericality: {
