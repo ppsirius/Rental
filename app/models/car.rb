@@ -10,4 +10,28 @@ class Car < ActiveRecord::Base
     less_than_or_equal_to: Time.now.year.to_i
   }
   validates :mileage, presence: true, numericality: {greater_than: 0}
+
+  state_machine initial: :available do
+    state :available
+    state :rented
+    state :serviced
+
+    event :rent do
+      transition :available => :rented
+    end
+
+    event :service do
+      transition :available => :serviced
+    end
+
+    event :return do
+      transition :rented => :available
+    end
+
+    event :fixed do
+      transition :serviced => :available
+    end
+
+
+  end
 end
