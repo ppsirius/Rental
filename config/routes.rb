@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   
   devise_for :users
   root to: 'rents#index'
@@ -10,6 +11,15 @@ Rails.application.routes.draw do
   get 'rents/update'
 
   get 'rents/destroy'
+
+  get 'clients/index'
+
+  get 'clients/new'
+
+  get 'clients/show'
+
+  get 'clients/edit'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
