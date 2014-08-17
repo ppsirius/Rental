@@ -1,12 +1,7 @@
-<%= simple_form_for(@car, html: {class: 'form-horizontal'}) do |f| %>
-<div class="field">
+<%= simple_form_for @car do |f| %>
 <%= f.association :model, label_method: lambda { |model| "#{model.brand.brand_name} #{model.model_name}"}, label: 'Marka - model' %></div>
-<div class="field">
 <%= f.input :mileage %></div>
-<div class="field">
 <%= f.input :year_of_manufacture %></div>
-<div class="field">
 <%= f.input :registration_no %></div>
-<div class='form-action'>
 <%= f.button :submit %></div>
 <% end %>
