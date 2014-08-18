@@ -1,0 +1,13 @@
+<%= form_for @car, url: wizard_path, method: :put do |f| %>
+
+<%= f.label 'Podaj przebieg samochodu' %>
+<%= f.text_field (:mileage) %>
+
+<%= f.label 'Podaj numer rejestracyjny samochodu' %>
+<%= f.text_field (:registration_no) %>
+
+<%= f.label 'Podaj rok produkcji samochodu' %>
+<%= f.text_field (:year_of_manufacture) %>
+
+<%= f.submit 'Dodaj samochód' %>
+<% end %>

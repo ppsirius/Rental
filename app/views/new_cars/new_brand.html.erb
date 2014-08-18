@@ -1,0 +1,5 @@
+<%= form_for @brand, url: wizard_path, method: :put do |f| %>
+<%= f.label 'Podaj markę samochodu' %>
+<%= f.text_field (:brand_name) %>
+<%= f.submit 'Dodaj markę' %>
+<% end %>
