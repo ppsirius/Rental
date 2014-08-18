@@ -43,3 +43,4 @@ gem 'simple_form'
 
 gem 'state_machine'
 gem 'devise'
+gem 'wicked'

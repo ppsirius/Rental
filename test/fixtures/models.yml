@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  model_name: MyString
-  brand_id: 1
+m3:
+  model_name: M3
+  brand: bmw
 
 two:
   model_name: MyString

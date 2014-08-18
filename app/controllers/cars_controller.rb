@@ -9,26 +9,30 @@ class CarsController < ApplicationController
   end
 
   def new
-  @car = Car.new
+    @car = Car.new
+    @brand = Brand.new
+    @model = Model.new
   end
 
   def create
-  @car = Car.new(contact_params)
+    @car = Car.new(car_params)
+    @brand = @car.model.brand.build(params[:brand])
+    @model = @car.model.build(params[:model])
     if @car.save
-    redirect_to root_path
+      redirect_to root_path
     else
-    render :new
+      render :new
     end
   end
 
 private
 
   def set_car
-  @car = Car.find(params[:id])
+    @car = Car.find(params[:id])
   end
   
   def car_params
-  params.require(:car).permit(:milage, :registration_no, :year_of_manufactur, :model_id)
+    params.require(:car).permit(:milage, :registration_no, :year_of_manufacture, :model_id)
   end
 
 end

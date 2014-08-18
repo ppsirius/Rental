@@ -5,21 +5,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'cars#index'
 
-  get 'rents/index'
+  resources :rents
 
-  get 'rents/new'
-
-  get 'rents/update'
-
-  get 'rents/destroy'
-
-  get 'clients/index'
-
-  get 'clients/new'
-
-  get 'clients/show'
-
-  get 'clients/edit'
+  resources :clients
+  resources :new_car
 
 
   # The priority is based upon order of creation: first created -> highest priority.
