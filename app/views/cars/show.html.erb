@@ -1,1 +1,12 @@
-show.html.erb
+<h1>Szczegóły samochodu</h1>
+
+<p>Marka: <%= @car.model.brand.brand_name %></p>
+<p>Model: <%= @car.model.model_name %></p>
+<p>Numer rejestracyjny: <%= @car.registration_no %></hp>
+<p>Przebieg: <%= @car.mileage %></p>
+<p>Data produkcji: <%= @car.year_of_manufacture %></p>
+<p>Dostępność: <%= @car.state %></p>
+
+<%= link_to 'Wypożycz', new_rent_path(:car_id => @car.id) %>
+
+<%= link_to 'Powrót', root_path %>

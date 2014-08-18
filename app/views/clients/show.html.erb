@@ -7,3 +7,4 @@
 
 <%= link_to 'Powrót', clients_path %>
 <%= link_to 'Usuń klienta', @client, method: :delete, data: { confirm: 'Jesteś pewny?'} %>
+<%= link_to 'Edytuj klienta', edit_client_path(@client) %>
