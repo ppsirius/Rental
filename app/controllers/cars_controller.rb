@@ -16,8 +16,6 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
-    @brand = @car.model.brand.build(params[:brand])
-    @model = @car.model.build(params[:model])
     if @car.save
       redirect_to root_path
     else
