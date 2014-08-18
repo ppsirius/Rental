@@ -7,17 +7,19 @@
     <thead>
       <tr>
         <th>BRAND</th>
+         <th>YEAR OF MANUFACTURE</th>
         <th>AVAILABILITY</th>
       </tr>
     </thead>
     <tbody>
       <% @cars.each do |car| %>
       <tr>
-        <td><%= car.brand.model %></td>
-        <td><%= car.state %>
-            <%= if car.state == rented %>
+        <td><%= car.model.model_name %></td>
+        <td><%= car.year_of_manufacture %></td>
+        <td>
+            <% if car.state_name == :rented %>
               RENTED
-            <% elsif car.state == serviced %>
+            <% elsif car.state_name == :serviced %>
               IN MAINTENANCE
             <% else %>
               AVAILABLE
