@@ -4,7 +4,7 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
   end
- 
+  
   def show
   end
 
@@ -15,9 +15,10 @@ class CarsController < ApplicationController
   end
 
   def create
-    @car = Car.new(car_params)
-    if @car.save
-      redirect_to root_path
+    @brand = Brand.new(params[:brand_name])
+    if @brand.save
+      session[:brand_id] = @brand.id
+      redirect_to new_car_steps_path
     else
       render :new
     end

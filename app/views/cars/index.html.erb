@@ -13,14 +13,9 @@
         <td><%= car.model.brand.brand_name %></td>
         <td><%= car.model.model_name %></td>
         <td>
-            <!-- <% if (car.state == 'rented') %>
-              RENTED
-            <% elsif (car.state == 'serviced') %>
-              IN MAINTENANCE
-            <% else %>
-              AVAILABLE -->
-            <% end %>
+           <%= car_state(car.state) %>
         </td>
         <% end %>
       </tr>
     </tbody>
+  </table>

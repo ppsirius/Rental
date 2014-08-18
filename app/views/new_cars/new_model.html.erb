@@ -1,0 +1,5 @@
+<%= form_for @model, url: wizard_path, method: :put do |f| %>
+<%= f.label 'Podaj model samochodu' %>
+<%= f.text_field (:model_name) %>
+<%= f.submit 'Dodaj model' %>
+<% end %>

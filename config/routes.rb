@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :rents
   
   resources :clients
-  resources :new_car
+  resources :new_cars
 
 
   # The priority is based upon order of creation: first created -> highest priority.
