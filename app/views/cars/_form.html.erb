@@ -1,0 +1,7 @@
+<%= simple_form_for @car do |f| %>
+<%= f.association :model, label_method: lambda { |model| "#{model.brand.brand_name} #{model.model_name}"}, label: 'Marka - model' %></div>
+<%= f.input :mileage %></div>
+<%= f.input :year_of_manufacture %></div>
+<%= f.input :registration_no %></div>
+<%= f.button :submit %></div>
+<% end %>
