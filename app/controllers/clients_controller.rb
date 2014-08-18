@@ -46,7 +46,7 @@ private
   end
 
   def client_params
-    params.require(:client).permit(:name, :surnam, :age, :document_no, :document_type)
+    params.require(:client).permit(:name, :surname, :age, :document_no, :document_type)
   end
 
 end
