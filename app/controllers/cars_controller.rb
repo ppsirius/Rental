@@ -10,6 +10,8 @@ class CarsController < ApplicationController
 
   def new
     @car = Car.new
+    @brand = Brand.new
+    @model = Model.new
   end
 
   def create
@@ -28,7 +30,7 @@ private
   end
   
   def car_params
-    params.require(:car).permit(:milage, :registration_no, :year_of_manufactur, :model_id)
+    params.require(:car).permit(:milage, :registration_no, :year_of_manufacture, :model_id)
   end
 
 end

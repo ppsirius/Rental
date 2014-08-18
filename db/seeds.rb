@@ -39,3 +39,5 @@ car_4 = Car.create!(model_id: audi.id, mileage: 12000, registration_no: "SJ1234"
   year_of_manufacture: 2010, state: 'serviced')
 
 
+
+

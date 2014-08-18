@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140812124300) do
   end
 
   create_table "cars", force: true do |t|
-    t.integer  "model_id"
+    t.string   "model_id"
     t.integer  "mileage"
     t.string   "registration_no"
     t.integer  "year_of_manufacture"
