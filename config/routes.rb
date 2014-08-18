@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'cars#index'
 
   resources :rents
-
+  
   resources :clients
   resources :new_car
 

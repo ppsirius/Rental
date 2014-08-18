@@ -1,1 +1,19 @@
-<h1>Rented Cars</h1>
+<h1>Wypożyczenia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Car</th>
+      <th>Person</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rents.each do |rent| %>
+      <tr>
+        <td><%= rent.car.id %></td>
+        <td><%= rent.client.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
