@@ -1,0 +1,8 @@
+<%= simple_form_for @client do |f| %>
+  <%= f.input :name, label: 'Imię' %>
+  <%= f.input :surname, label: 'Nazwisko' %>
+  <%= f.input :age, label: 'Wiek' %>
+  <%= f.input :document_type, label: 'Rodzaj dokumentu' %>
+  <%= f.input :document_no, lable: 'Numer dokumentu' %>
+  <%= f.button :submit, lable: 'Potwierdź' %>
+<% end %>
