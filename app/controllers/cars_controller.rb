@@ -13,7 +13,7 @@ class CarsController < ApplicationController
   end
 
   def create
-    @car = Car.new(contact_params)
+    @car = Car.new(car_params)
     if @car.save
       redirect_to root_path
     else

@@ -1,2 +1,27 @@
 <h1>Lista klientów</h1>
-<p>Find me in app/views/clients/index.html.erb</p>
+
+<table class="table table table-striped">
+  <thead>
+    <tr>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Wiek</th>
+      <th>Nr dokumentu</th>
+      <th>Typ dokumentu</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clients.each do |client| %>
+    <tr>
+      <td><%= client.name %></td>
+      <td><%= client.surname %></td>
+      <td><%= client.age %></td>
+      <td><%= client.document_no %></td>
+      <td><%= client.document_type %><td>
+      <td><%= link_to 'Podgląd', client_path(client) %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
