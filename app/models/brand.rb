@@ -3,7 +3,7 @@ class Brand < ActiveRecord::Base
 
   has_many :models
 
-  validates :brand_name, presence: true, length: {minimum: 3}, format: {with: /\A[a-zA-Z]+\z/}
+  validates :brand_name, presence: true
   validates :brand_name, uniqueness: true
 
 end

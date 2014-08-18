@@ -11,11 +11,6 @@ class Car < ActiveRecord::Base
   }
   validates :mileage, presence: true, numericality: {greater_than: 0}
 
-  def human_state
-    if state == ""
-      return ""
-    end
-  end
 
   state_machine initial: :available do
     state :available
