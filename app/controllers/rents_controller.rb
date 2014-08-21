@@ -14,6 +14,7 @@ class RentsController < ApplicationController
   def create
     @rent = Rent.new(rent_params)
       if @rent.save
+        @rent.car.rent
         redirect_to rents_path, notice: 'Rent was successfully created.'
       else
         render :new
