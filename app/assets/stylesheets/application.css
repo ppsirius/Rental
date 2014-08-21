@@ -15,8 +15,5 @@
  */
 
 
-th {
-  border: solid;
-  border-color: black;
-  border-collapse: collapse;
-}
+*= require bootstrap.min
+
