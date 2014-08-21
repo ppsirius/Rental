@@ -1,7 +1,9 @@
 <%= simple_form_for @rent do |f| %>
-  <%= f.association :client, label_method: client_datas, :include_blank => false %>
-  <%= f.association :car, :include_blank => false %>
 
-  
+  <%= f.association :car, label_method: car_datas %>
+  <%= f.association :client, label_method: client_datas %>
+  <%= f.input :plan_return_date, label: 'Planowana data zwrotu' %>
+  <%= f.hidden_field :car_id, value: @car %>
+
   <%= f.button :submit %>
 <% end %>

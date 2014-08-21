@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812124300) do
+ActiveRecord::Schema.define(version: 20140821142150) do
 
   create_table "brands", force: true do |t|
     t.string   "brand_name"
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 20140812124300) do
     t.integer  "car_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "plan_return_date"
+    t.date     "return_date"
+    t.boolean  "open",             default: true
   end
 
   create_table "users", force: true do |t|

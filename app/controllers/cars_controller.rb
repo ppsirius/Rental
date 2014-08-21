@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  before_action :set_car, only: [:show]
+  before_action :set_car, only: [:show, :destroy]
 
   def index
     @cars = Car.all
@@ -8,21 +8,16 @@ class CarsController < ApplicationController
   def show
   end
 
-  def new
-    @car = Car.new
-    @brand = Brand.new
-    @model = Model.new
+  def edit
   end
 
-  def create
-    @brand = Brand.new(params[:brand_name])
-    if @brand.save
-      session[:brand_id] = @brand.id
-      redirect_to new_car_steps_path
-    else
-      render :new
+  def destroy
+    @car.destroy
+     respond_to do |format|
+      format.html { redirect_to root_url, notice: 'Samochód został usunięty' }
+      format.json { head :no_content }
     end
-  end
+  end  
 
 private
 

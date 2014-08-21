@@ -38,6 +38,4 @@ car_3 = Car.create!(model_id: mercedes.id, mileage: 23000, registration_no: "WW1
 car_4 = Car.create!(model_id: audi.id, mileage: 12000, registration_no: "SJ1234", 
   year_of_manufacture: 2010, state: 'serviced')
 
-rent_1 = Rent.create!(client_id: client_1.id, car_id: car_1.id)
-rent_2 = Rent.create!(client_id: client_1.id, car_id: car_1.id)
 
