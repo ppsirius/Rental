@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save
-      redirect_to @client, notice: 'Client was successfully created.'
+      redirect_to @client, notice: 'Klient został prawidłowo dodany'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class ClientsController < ApplicationController
 
 	def update
     if @client.update(client_params)
-      redirect_to @client, notice: 'Client was successfully updated.' 
+      redirect_to @client, notice: 'Klient został prawidłowo zaktualizowany'
     else
       render :edit
     end

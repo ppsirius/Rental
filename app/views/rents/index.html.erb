@@ -5,6 +5,8 @@
     <tr>
       <th>Car</th>
       <th>Person</th>
+      <th>Data wypożyczenia</th>
+      <th>Data plaowanego zwrotu</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +14,8 @@
       <tr>
         <td><%= rent.car.id %></td>
         <td><%= rent.client.id %></td>
+        <td><%= rent.created_at %></td>
+        <td><%= rent.plan_return_date %></td>
       </tr>
     <% end %>
   </tbody>
