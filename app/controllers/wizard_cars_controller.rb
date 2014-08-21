@@ -1,4 +1,4 @@
-class NewCarsController < ApplicationController
+class WizardCarsController < ApplicationController
   include Wicked::Wizard
 
   steps :new_brand, :new_model , :add_car

@@ -1,13 +1,14 @@
 
-  <table class="table">
+  <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th>BRAND</th>
+        <th>MARKA</th>
         <th>MODEL</th>
-        <th>AVAILABILITY</th>
+        <th>DOSTĘPNOŚĆ</th>
+        <th>OPCJE</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="table table-striped">
       <% @cars.each do |car| %>
       <tr>
         <td><%= car.model.brand.brand_name %></td>
@@ -15,7 +16,14 @@
         <td>
            <%= car_state(car.state) %>
         </td>
+        <td><%= link_to 'Usuń', car, method: :delete, data: { confirm: 'Na pewno usunąć?' }, class: "btn btn-danger btn-xs" %>
+          <%= link_to 'Szczegóły', car_path(car), class: "btn btn-info btn-xs" %>
+
+        </td>
+       
         <% end %>
-      </tr>
+      </tr>     
     </tbody>
   </table>
+
+<%= link_to "Dodaj nowy samochód", wizard_car_path(:new_brand), class: "btn btn-success" %>

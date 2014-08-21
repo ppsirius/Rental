@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   resources :rents
   
   resources :clients
-  resources :new_cars
+  resources :wizard_cars
+
+  #get '/new_cars/new_brand' to: 'new_cars#show'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
