@@ -30,7 +30,7 @@ class RentsController < ApplicationController
 private
 
   def rent_params
-    params.require(:rent).permit(:client_id, :car_id)
+    params.require(:rent).permit(:client_id, :car_id, :plan_return_date)
   end
 
 end

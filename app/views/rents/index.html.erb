@@ -6,14 +6,14 @@
       <th>Car</th>
       <th>Person</th>
       <th>Data wypożyczenia</th>
-      <th>Data plaowanego zwrotu</th>
+      <th>Data planowanego zwrotu</th>
     </tr>
   </thead>
   <tbody>
     <% @rents.each do |rent| %>
       <tr>
-        <td><%= rent.car.id %></td>
-        <td><%= rent.client.id %></td>
+        <td><%= rent_car_datas(rent) %></td>
+        <td><%= rent_client_datas(rent) %></td>
         <td><%= rent.created_at %></td>
         <td><%= rent.plan_return_date %></td>
       </tr>
