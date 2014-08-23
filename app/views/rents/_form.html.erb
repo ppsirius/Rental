@@ -2,7 +2,7 @@
 
   <%= f.association :client, label_method: client_datas %>
   <%= f.input :plan_return_date, label: 'Planowana data zwrotu' %>
-  <%= f.hidden_field :car_id, value: @car %>
+  <%= f.hidden_field :car_id, value: @car.id %>
 
   <%= f.button :submit %>
 <% end %>

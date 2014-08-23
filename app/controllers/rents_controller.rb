@@ -8,13 +8,13 @@ class RentsController < ApplicationController
 
   def new
     @rent = Rent.new
-    @car = Car.find(params[:car_id]).id
+    @car = Car.find(params[:car_id])
 
   end
 
   def create
     @rent = Rent.new(rent_params)
-      if @rent.save
+      if @rent.car.state == "available" && @rent.save 
         @rent.car.rent
         redirect_to rents_path, notice: 'Rent was successfully created.'
       else
