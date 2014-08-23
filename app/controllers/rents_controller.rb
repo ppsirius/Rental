@@ -1,4 +1,6 @@
 class RentsController < ApplicationController
+  before_action :set_rent, only: [:return, :update]
+
 
 #before_action :authenticate_user!, :except => [:index] 
 
@@ -23,6 +25,13 @@ class RentsController < ApplicationController
   end
 
   def update
+    if @rent.update(rent_params)
+      redirect_to rents_path, notice: 'Dokonano zwrotu samochodu'
+    end
+  end
+
+  def return
+    render '_return_form'
   end
 
   def destroy
@@ -31,7 +40,11 @@ class RentsController < ApplicationController
 private
 
   def rent_params
-    params.require(:rent).permit(:client_id, :car_id, :plan_return_date)
+    params.require(:rent).permit(:client_id, :car_id, :plan_return_date, :return_date)
+  end
+
+  def set_rent
+    @rent = Rent.find(params[:id])
   end
 
 end

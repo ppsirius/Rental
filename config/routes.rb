@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'cars#index'
 
-  resources :rents
+  resources :rents do
+    member do
+      get 'return'
+    end
+  end
   
   resources :clients
   resources :wizard_cars

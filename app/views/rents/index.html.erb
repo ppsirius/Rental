@@ -1,4 +1,4 @@
-<h1>Wypożyczenia</h1>
+<h1>Wypożyczenia otwarte</h1>
 
 <table>
   <thead>
@@ -7,6 +7,7 @@
       <th>Person</th>
       <th>Data wypożyczenia</th>
       <th>Data planowanego zwrotu</th>
+      <th>AKCJA</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
         <td><%= rent_client_datas(rent) %></td>
         <td><%= rent.created_at %></td>
         <td><%= rent.plan_return_date %></td>
+        <td><%= link_to "Zwrot samochodu", return_rent_path(rent) %></td>
       </tr>
     <% end %>
   </tbody>
