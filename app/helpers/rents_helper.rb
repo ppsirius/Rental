@@ -4,6 +4,10 @@ module RentsHelper
     lambda { |client| "#{client.name} #{client.surname} #{client.document_no}"}
   end
 
+  def car_datas
+    lambda { |car| "#{car.model.brand.brand_name} #{car.state}"}
+  end
+
   def rent_client_datas(rent)
     "#{rent.client.name} #{rent.client.surname} #{rent.client.document_no}"
   end

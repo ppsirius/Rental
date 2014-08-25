@@ -7,7 +7,5 @@
 <p>Data produkcji: <%= @car.year_of_manufacture %></p>
 <p>Dostępność: <%= @car.state %></p>
 
-<% if car_ready(@car) == true %>
-  <%= link_to 'Wypożycz', new_rent_path(:car_id => @car.id) %>
-<% end %>
+<%= car_rent(@car) %>
 <%= link_to 'Powrót', root_path %>

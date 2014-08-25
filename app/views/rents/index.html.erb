@@ -18,6 +18,7 @@
         <td><%= rent.created_at %></td>
         <td><%= rent.plan_return_date %></td>
         <td><%= link_to "Zwrot samochodu", return_rent_path(rent) %></td>
+        <td><%= link_to "Usuń wypożyczenie", rent, method: :delete, data: { confirm: 'Jesteś pewny?'}  %></td>
       </tr>
     <% end %>
   </tbody>

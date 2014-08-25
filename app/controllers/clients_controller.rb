@@ -10,7 +10,6 @@ class ClientsController < ApplicationController
   end
 
   def edit
-    @clients = Client.all
   end
 
   def new
