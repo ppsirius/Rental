@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @rents.each do |rent| %>
+    <% @rents_active.each do |rent| %>
       <tr>
         <td><%= rent_car_datas(rent) %></td>
         <td><%= rent_client_datas(rent) %></td>
@@ -19,6 +19,30 @@
         <td><%= rent.plan_return_date %></td>
         <td><%= link_to "Zwrot samochodu", return_rent_path(rent) %></td>
         <td><%= link_to "Usuń wypożyczenie", rent, method: :delete, data: { confirm: 'Jesteś pewny?'}  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><br><br>
+<h1>Wypożyczenia zamknięte</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Car</th>
+      <th>Person</th>
+      <th>Data wypożyczenia</th>
+      <th>Data planowanego zwrotu</th>
+      <th>AKCJA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rents_inactive.each do |rent| %>
+      <tr>
+        <td><%= rent_car_datas(rent) %></td>
+        <td><%= rent_client_datas(rent) %></td>
+        <td><%= rent.created_at %></td>
+        <td><%= rent.plan_return_date %></td>
       </tr>
     <% end %>
   </tbody>

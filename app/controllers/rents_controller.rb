@@ -5,7 +5,8 @@ class RentsController < ApplicationController
 #before_action :authenticate_user!, :except => [:index] 
 
   def index
-    @rents = Rent.all
+    @rents_active = Rent.active
+    @rents_inactive = Rent.inactive
   end
 
   def new
